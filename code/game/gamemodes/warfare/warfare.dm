@@ -36,6 +36,11 @@
 	if(src in SSwarfare.red.team)//Same here.
 		SSwarfare.red.left--
 		SSwarfare.red.team -= src
+	
+	if(warfare_faction == RED_TEAM)
+		IO_output("game_events:OnRedDeath", null, null)
+	else if(warfare_faction == BLUE_TEAM)
+		IO_output("game_events:OnBlueDeath", null, null)
 
 	if(client)
 		client.warfare_deaths++
@@ -63,9 +68,6 @@
 
 	if(tracking)
 		tracking.update()
-
-	if(waypoint)
-		waypoint.update()
 
 /proc/iswarfare()
     return (istype(ticker.mode, /datum/game_mode/warfare) || master_mode=="warfare")

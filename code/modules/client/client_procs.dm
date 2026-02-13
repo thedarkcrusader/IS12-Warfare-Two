@@ -253,6 +253,7 @@
 		SSwarfare.blue.team_clients -= src
 	else
 		SSwarfare.red.team_clients -= src
+		
 	return ..()
 
 /client/Destroy()
@@ -506,7 +507,6 @@ client/proc/MayRespawn()
 /mob/living/carbon/onMouseMove(var/atom/object, location, control, params)
 	if(weapon_readied && !zoomed) //If aiming and not zoomed then turn
 		face_atom(object)
-
 
 /client/verb/fit_viewport()
 	set name = "Fit Viewport"

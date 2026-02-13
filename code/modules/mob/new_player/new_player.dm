@@ -311,7 +311,10 @@
 	if(job.is_blue_team)
 		if(client?.warfare_faction != BLUE_TEAM)
 			return 0
-
+	if(length(GLOB.payloads) && job.payload_block)
+		return 0
+	if(job.spawn_in_cryopod && client?.suicider)
+		return 0
 	return 1
 
 /mob/new_player/proc/get_branch_pref()
@@ -387,8 +390,11 @@
 
 		qdel(C)
 		qdel(src)
+		if(character.client)
+			character.client.suicider = 0
 		return
-
+	if(character.client)
+		character.client.suicider = 0
 	ticker.mode.handle_latejoin(character)
 	GLOB.universe.OnPlayerLatejoin(character)
 	if(SSjobs.ShouldCreateRecords(job.title))

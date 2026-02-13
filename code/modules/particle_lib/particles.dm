@@ -290,29 +290,6 @@
 	drift = generator("circle", 0, 3.5)
 	friction = 0.3
 
-/particles/rain
-	icon = 'icons/effects/particles/particle.dmi'
-	icon_state = "drop"
-	color = "#ccffff"
-	transform = list( 1, 0, 0,  0  ,
-								   0, 1, 0,  0  ,
-								   0, 0, 1, 1/10,
-								   0, 0, 0,  1)
-	width = 500
-	height = 500
-	count = 3000
-	spawning = 12
-	bound1 = list(-500,-256,-10)
-	bound2 = list(500,500,10)
-	lifespan = 600
-	fade = 30
-	position = generator("box", list(-500,-256,0), list(400,500,0))
-	grow = list(-0.01,-0.01)
-	gravity = list(0, -10, 0.5)
-	drift = generator("circle", 0, 1)
-	friction = 0.3
-	transform = null
-
 /particles/dust
 	icon = 'icons/effects/particles/particle.dmi'
 	icon_state             = list("dot"=5, "cross"=1)
@@ -397,3 +374,19 @@
 	alpha = 225
 	particles = new/particles/fire_sparks
 	plane = BLOOM_PLANE
+
+/particles/bloodpuff
+	width = 124
+	height = 124
+	count = 16
+	spawning = 999999 //spawn all instantly
+	lifespan = 0.75 SECONDS
+	fade = 0.35 SECONDS
+	gradient = list(0, COLOR_RED, 1, COLOR_BLOOD_HUMAN)
+	position = generator("box", list(-10, -10), list(10, 10), NORMAL_RAND)
+	velocity = generator("circle", -15, 15, NORMAL_RAND)
+	friction = 0.225
+	gravity = list(0, -1)
+	icon = 'icons/effects/particles/particles.dmi'
+	icon_state = list("rock1", "rock2", "rock3", "rock4", "rock5")
+	rotation = generator("num", 0, 360, NORMAL_RAND)

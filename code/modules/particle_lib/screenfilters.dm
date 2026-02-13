@@ -1,5 +1,5 @@
 /obj/screenfilter
-	plane = EFFECTS_ABOVE_LIGHTING_PLANE
+	plane = EFFECTS_BELOW_LIGHTING_PLANE
 	layer = EFFECTS_LAYER
 
 /obj/screenfilter/snow
@@ -59,8 +59,6 @@
 
 /obj/screenfilter/proc/Fade() //cool fading effect
 	qdel(src)
-
-// NOTE: DELETE THIS AND PROPERLY MAKE IT ALL EMITTERS!!
 
 /obj/emitter/smoke
 	layer = FIRE_LAYER

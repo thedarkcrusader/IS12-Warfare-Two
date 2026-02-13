@@ -14,7 +14,11 @@ GLOBAL_LIST_EMPTY(lighting_dummies)
 	GLOB.lighting_dummies += src
 	if(aspect_chosen(/datum/aspect/nightfare)) //For init. Note this will probably force this mode on until behavior has been made for deactivating aspects.
 		return
-	set_light(2, 1, "#545484")
+	if(SSday_cycle)
+		set_light(2, 1, "#FFFFFF")
+	else
+		set_light(2, 1, "#545484")
+
 
 /obj/effect/lighting_dummy/Destroy() //Shouldn't happen but let's prevent runtimes.
 	. = ..()
@@ -30,8 +34,8 @@ GLOBAL_LIST_EMPTY(lighting_dummies)
 	icon = 'icons/obj/items/mortars.dmi'
 	icon_state = "redFlare"
 	plane = EFFECTS_ABOVE_LIGHTING_PLANE
-	light_power = 6
-	light_range = 10
+	light_power = 12
+	light_range = 32
 	light_color = COLOR_RED
 
 	Initialize()
@@ -41,3 +45,4 @@ GLOBAL_LIST_EMPTY(lighting_dummies)
 /obj/effect/lighting_dummy/flare/blue
 	icon_state = "blueFlare"
 	light_color = COLOR_BLUE
+	

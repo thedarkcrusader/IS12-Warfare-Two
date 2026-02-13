@@ -48,6 +48,11 @@
 	user.update_action_buttons()
 	return 1
 
+/obj/item/device/flashlight/proc/set_on(status = TRUE)
+	if(on == status)
+		return
+	on = status
+	update_icon()
 
 /obj/item/device/flashlight/attack(mob/living/M as mob, mob/living/user as mob)
 	add_fingerprint(user)

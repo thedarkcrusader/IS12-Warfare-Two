@@ -65,7 +65,12 @@
 	for(var/atom/movable/A in src)
 		A.fall()
 	SSopen_space.add_turf(src, 1)
+
+	if(below && !(locate(/obj/effect/lighting_dummy/daylight) in below) && (locate(/obj/effect/lighting_dummy/daylight) in src))
+		new /obj/effect/lighting_dummy/daylight(below)
+
 	update_icon()
+
 
 
 /turf/simulated/open/update_dirt()
@@ -129,6 +134,7 @@
 			if(O.invisibility) continue // Ignore objects that have any form of invisibility
 			if(O.loc != below) continue // Ignore multi-turf objects not directly below
 			if(istype(O, /obj/machinery/light)) continue // INTERWAR EDIT: HACKY FIX TO STOP LIGHTS FROM BEING FUCKSHIT!!
+			if(istype(O, /obj/effect/map_entity)) continue
 			var/image/temp2 = image(O, dir = O.dir, layer = O.layer)
 			temp2.overlays += O.overlays
 			temp2.underlays += O.underlays

@@ -112,6 +112,7 @@
 	lmg_skill = 3
 	smg_skill = 3
 	close_when_dead = TRUE
+	payload_block = TRUE
 	// open_when_dead = TRUE
 
 	announced = FALSE
@@ -184,7 +185,6 @@
 	can_be_in_squad = FALSE
 	sniper_skill = 10
 	open_when_dead = TRUE
-
 	backstories = list(/datum/backstory/nepotismcaptain, /datum/backstory/childcaptain)
 
 	announced = FALSE

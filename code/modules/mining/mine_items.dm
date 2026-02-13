@@ -35,7 +35,7 @@
 	icon_state = "lantern"
 	worldicons = "lantern_world"
 	desc = "A mining lantern."
-	brightness_on = 6			// luminosity when on
+	brightness_on = 10			// luminosity when on
 
 /*****************************Pickaxe********************************/
 

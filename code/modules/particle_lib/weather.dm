@@ -73,8 +73,8 @@ particles
 
 		width 		= 5000
 		height 		= 5000
-		count 		= 30
-		spawning 	= 3
+		count 		= 1000
+		spawning 	= 75
 		lifespan 	= 20
 		fade 		= 2
 		fadein		= 3
@@ -97,14 +97,14 @@ particles
 
 		width 		= 5000
 		height 		= 5000
-		count 		= 200
-		spawning 	= 6
+		count 		= 1000
+		spawning 	= 75
 		lifespan 	= 20
 		fade 		= 2
 		fadein		= 3
 
 		position 	= generator("box", list(-500,-500,0), list(500,500,0))
-		gravity 	= list(-1, -6)
+		gravity 	= list(-1, -12)
 		drift 		= generator("circle", 1)
 
 

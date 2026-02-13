@@ -95,6 +95,8 @@
 	var/gun_type = "generic"
 	var/bayonet_icon
 	var/misfire = FALSE //for guns with special checks like the PTSD41 and Harbinger
+	var/starts_with_bayonet = FALSE
+	var/can_have_bayonet = FALSE
 
 	var/next_fire_time = 0
 
@@ -111,14 +113,7 @@
 	var/tmp/lock_time = -100
 	var/can_jam = TRUE
 
-	//attachment shit
 	var/damage_modifier = 0
-
-	var/list/attachments = list()				//List of all current attachments on the gun.
-	var/list/attachable_allowed = list()		//Must be the exact path to the attachment present in the list. Empty list for a default.
-	var/attachable_overlays[] = null			//List of overlays so we can switch them in an out, instead of using Cut() on overlays.
-	var/attachable_offset[] = null				//Is a list, see examples of from the other files. Initiated on New() because lists don't initial() properly.
-
 
 /obj/item/gun/Initialize()
 	. = ..()
@@ -128,12 +123,9 @@
 	if(isnull(scoped_accuracy))
 		scoped_accuracy = accuracy
 
-	attachable_overlays = list("muzzle" = null, "rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
-	set_gun_attachment_offsets()
+	if(starts_with_bayonet)
+		add_bayonet()
 
-
-/obj/item/gun/proc/set_gun_attachment_offsets()
-	attachable_offset = null
 
 /obj/item/gun/update_icon()
 	if(wielded_item_state)
@@ -397,7 +389,7 @@
 	//Accuracy modifiers
 	P.accuracy = accuracy + acc_mod + dexToAccuracyModifier(user.my_stats[STAT(dex)].level)
 	P.dispersion = disp_mod + (user.recoil / 2)//Recoil gets added when you shoot. The faster we shoot our semi-auto gun the less accurate it is.
-	if(user.crouching || user.lying)//Blind firing out of the trench.
+	if(user.crouching || user.lying)//Blind firing out of the trench or crater.
 		if(istype(user.loc, /turf/simulated/floor/trench))
 			P.dispersion += 10
 			P.accuracy -= 5
@@ -551,6 +543,8 @@
 		if (in_chamber.damage_type != PAIN)
 			log_and_message_admins("[key_name(user)] commited suicide using \a [src]")
 			user.unlock_achievement(new/datum/achievement/suicide())
+			if(user.client)
+				user.client.suicider = 1
 			user.apply_damage(in_chamber.damage*2.5, in_chamber.damage_type, BP_HEAD, 0, in_chamber.damage_flags(), used_weapon = "Point blank shot in the mouth with \a [in_chamber]")
 			user.death()
 
@@ -638,6 +632,20 @@
 	new_mode.apply_to(src)
 
 	return new_mode
+
+/obj/item/gun/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/material/sword/combat_knife) && can_have_bayonet)
+		user.visible_message("[user] attaches a bayonet to the [src].","You attach a bayonet to the [src].")
+		user.remove_from_mob(W)
+		qdel(W)
+		add_bayonet()
+		return
+	..()
+
+/obj/item/gun/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
+		return 1
+	return 0
 
 /obj/item/gun/attack_self(mob/user)
 	var/datum/firemode/new_mode = switch_firemodes(user)
