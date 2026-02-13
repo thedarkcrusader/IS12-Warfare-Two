@@ -43,7 +43,7 @@ GLOBAL_LIST_EMPTY(announcement_microphones)
 	if(!length(speakers))
 		return
 
-		if(!(copytext(text, -1) in PUNCTUATION))
+	if(!(copytext(text, -1) in PUNCTUATION))
 		text = "[text]."
 	text = replacetext(text, "/", "")
 	text = replacetext(text, "~", "")

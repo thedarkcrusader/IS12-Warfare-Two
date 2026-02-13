@@ -1563,7 +1563,6 @@
 #include "code\modules\map_entity\other_shit.dm"
 #include "code\modules\map_entity\payload.dm"
 #include "code\modules\map_entity\sounds.dm"
-#include "code\modules\map_entity\soundscapes.dm"
 #include "code\modules\map_entity\triggers.dm"
 #include "code\modules\map_entity\weather_mask.dm"
 #include "code\modules\mapgen\mapgen.dm"
