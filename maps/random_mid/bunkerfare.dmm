@@ -22,7 +22,7 @@
 "sr" = (/obj/effect/floor_decal/urban/trim3{dir = 5},/obj/effect/map_entity/environment_blocker,/turf/simulated/floor/exoplanet/water/shallow/lightless/urban,/area/warfare/battlefield/capture_point/mid)
 "sy" = (/obj/machinery/light/caged{pixel_y = -14; dir = 1; pixel_x = 16},/obj/effect/map_entity/environment_blocker,/turf/simulated/floor/urban/concrete,/area/warfare/battlefield/capture_point/mid)
 "ua" = (/obj/structure/defensive_barrier{pixel_y = -4; secured = 1},/obj/effect/map_entity/nodraw,/turf/simulated/wall/perspecticrete,/area/template_noop)
-"uv" = (/obj/structure/railing/urban/corner{dir = 6; pixel_x = 15; pixel_y = -4},/obj/structure/railing/urban/corner{dir = 10; pixel_x = -16; pixel_y = -4},/obj/structure/railing/urban/corner{dir = 5; pixel_x = 15; pixel_y = 26; plane = -7},/obj/structure/railing/urban/corner{dir = 9; pixel_x = -16; pixel_y = 26; plane = -7},/turf/simulated/floor/urban/concrete,/area/template_noop)
+"uv" = (/obj/structure/barbwire,/obj/structure/barbwire,/turf/simulated/floor/dirty/indestructable,/area/template_noop)
 "vK" = (/obj/machinery/light/caged{pixel_y = -14; dir = 1},/obj/effect/map_entity/environment_blocker,/turf/simulated/floor/exoplanet/water/shallow/lightless/urban,/area/warfare/battlefield/capture_point/mid)
 "vN" = (/turf/simulated/floor/dirty/indestructable,/area/template_noop)
 "wv" = (/obj/machinery/light/caged{pixel_y = 29},/obj/effect/map_entity/environment_blocker,/turf/simulated/floor/exoplanet/water/shallow/lightless/urban,/area/warfare/battlefield/capture_point/mid)
@@ -429,8 +429,8 @@ rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
-rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNLgvNvNvNLgLgLgLgLgLgLgLgLgLgvNvNvNLgvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
-rTrTrTrTrTrTrTrTrTrTmyvNLgvNvNvNvNuvvNononononononononononvNuvvNvNvNvNLgvNrTrTrTrTrTrTrTrTrTrTrT
+rTrTrTrTrTrTrTrTrTrTmyvNvNLgLgLgvNvNvNLgLgLgLgLgLgLgLgLgLgvNvNvNLgLgLgvNvNrTrTrTrTrTrTrTrTrTrTrT
+rTrTrTrTrTrTrTrTrTrTmyLgLgvNvNvNvNvNvNononononononononononvNvNvNvNvNvNLgLgrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNWMWMOFvNWMWMvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyLgLgLgKUKULgLgLgVwVwhyhyVwVwhyhyVwVwLgLgLgKUKULgLgLgrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmymVmVmVNuPrmVmVmVmVRmLtLtRRLtLtLtEwmVmVmVmVNuPrmVmVmVrTrTrTrTrTrTrTrTrTrTrT
@@ -445,8 +445,8 @@ rTrTrTrTrTrTrTrTmVmVmVmVmeLtoKbGLtLtmemVLtLtLtTULtLtLtLtmVmeLtLtPnoKLtmemVmVmVmV
 rTrTrTrTrTrTrTrTrTrTmymVmVmVNuPrmVmVmVmVmeLtLtsyLtLtLtmemVmVmVmVNuPrmVmVmVrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyLgLgLgkAkALgLgLgVwVwhyecVwVwhyhyVwVwLgLgLgkAkALgLgLgrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNHOHOAPvNHOHOvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
-rTrTrTrTrTrTrTrTrTrTmyvNLgvNvNvNvNvNvNononononononononononvNvNvNvNvNvNLgvNrTrTrTrTrTrTrTrTrTrTrT
-rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNLgvNvNvNLgLgLgLgLgLgLgLgLgLgvNvNvNLgvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
+rTrTrTrTrTrTrTrTrTrTmyLgLgvNvNvNvNvNvNononononononononononvNvNvNvNvNvNLgLgrTrTrTrTrTrTrTrTrTrTrT
+rTrTrTrTrTrTrTrTrTrTmyvNvNuvLgLgvNvNvNLgLgLgLgLgLgLgLgLgLgvNvNvNLgLgLgvNvNrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT
 rTrTrTrTrTrTrTrTrTrTmyvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNvNrTrTrTrTrTrTrTrTrTrTrT

@@ -1,39 +1,34 @@
 "a" = (/turf/template_noop,/area/template_noop)
-"b" = (/obj/effect/floor_decal/newcorner/kafel/blue/quarter{dir = 1},/obj/effect/lighting_dummy/daylight,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
-"c" = (/obj/effect/floor_decal/urban/trim3{dir = 9},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier,/obj/structure/defensive_barrier{secured = 1; dir = 8; pixel_x = 4; pixel_y = 2},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"c" = (/obj/effect/floor_decal/urban/trim3{dir = 9},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "d" = (/obj/structure/defensive_barrier{dir = 1; pixel_y = 12; secured = 1},/obj/effect/map_entity/nodraw,/turf/simulated/wall/perspecticrete{layer = 29; plane = -150},/area/template_noop)
 "h" = (/obj/machinery/light/small/red{dir = 8; pixel_y = 6; pixel_x = -7},/turf/simulated/floor/concrete/random,/area/template_noop)
 "i" = (/turf/simulated/floor/trench,/area/template_noop)
-"j" = (/obj/effect/floor_decal/urban/trim3{dir = 6},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{dir = 1; pixel_y = 12; secured = 1},/obj/structure/defensive_barrier{secured = 1; dir = 4; pixel_x = 2; pixel_y = 1},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"j" = (/obj/effect/floor_decal/urban/trim3{dir = 6},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "l" = (/turf/space,/area/template_noop)
 "m" = (/turf/simulated/floor/dirty/indestructable,/area/template_noop)
-"o" = (/obj/effect/floor_decal/newcorner/red/quarter{dir = 8},/obj/effect/lighting_dummy/daylight,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"o" = (/obj/effect/lighting_dummy/daylight,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "q" = (/turf/simulated/floor/concrete/random,/area/template_noop)
-"r" = (/obj/effect/floor_decal/urban/trim3{dir = 1},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
-"s" = (/obj/effect/lighting_dummy/daylight,/turf/simulated/floor/trench,/area/warfare/battlefield/capture_point/mid)
+"r" = (/obj/effect/floor_decal/urban/trim3{dir = 1},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "t" = (/obj/structure/landmine/red,/turf/simulated/floor/dirty/indestructable,/area/template_noop)
 "u" = (/turf/simulated/wall/perspecticrete,/area/template_noop)
 "v" = (/obj/structure/trench_wall/sequel{dir = 4},/turf/simulated/mineral{health = 999999},/area/template_noop)
 "x" = (/obj/structure/trench_wall{dir = 6},/turf/simulated/mineral{health = 999999},/area/template_noop)
-"y" = (/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{secured = 1; dir = 8; pixel_x = 4; pixel_y = 2},/turf/simulated/floor/trench,/area/warfare/battlefield/capture_point/mid)
-"z" = (/obj/effect/floor_decal/urban/trim3{dir = 4},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{secured = 1; dir = 4; pixel_x = 2; pixel_y = 1},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
-"A" = (/obj/effect/floor_decal/urban/trim3,/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{dir = 1; pixel_y = 12; secured = 1},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"z" = (/obj/effect/floor_decal/urban/trim3{dir = 4},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"A" = (/obj/effect/floor_decal/urban/trim3,/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "B" = (/turf/simulated/mineral{health = 999999},/area/template_noop)
 "C" = (/obj/machinery/door/airlock/multi_tile/metal/maintenance/blue,/turf/space,/area/template_noop)
 "D" = (/obj/structure/trench_wall{dir = 10},/turf/simulated/mineral{health = 999999},/area/template_noop)
 "E" = (/obj/structure/barbwire,/turf/simulated/floor/dirty/indestructable,/area/template_noop)
 "G" = (/obj/structure/trench_wall{dir = 8},/turf/simulated/mineral{health = 999999},/area/template_noop)
-"H" = (/obj/effect/floor_decal/urban/trim3{dir = 10},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{dir = 1; pixel_y = 12; secured = 1},/obj/structure/defensive_barrier{secured = 1; dir = 8; pixel_x = 4; pixel_y = 2},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
-"J" = (/obj/effect/floor_decal/newcorner/red/quarter,/obj/effect/lighting_dummy/daylight,/obj/structure/vague_statue/random{name = "statue"; pixel_y = 16; anchored = 1; density = 1},/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"H" = (/obj/effect/floor_decal/urban/trim3{dir = 10},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "L" = (/obj/structure/trench_wall{dir = 4},/turf/simulated/mineral{health = 999999},/area/template_noop)
 "M" = (/obj/effect/phone_line,/turf/template_noop,/area/template_noop)
 "N" = (/obj/structure/landmine/blue,/turf/simulated/floor/dirty/indestructable,/area/template_noop)
 "O" = (/obj/structure/trench_wall/sequel{dir = 8},/turf/simulated/mineral{health = 999999},/area/template_noop)
 "Q" = (/obj/structure/dirt_wall,/turf/simulated/floor/dirty/indestructable,/area/template_noop)
-"R" = (/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{secured = 1; dir = 4; pixel_x = 2; pixel_y = 1},/turf/simulated/floor/trench,/area/warfare/battlefield/capture_point/mid)
-"S" = (/obj/effect/floor_decal/urban/trim3{dir = 5},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier,/obj/structure/defensive_barrier{secured = 1; dir = 4; pixel_x = 2; pixel_y = 1},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
-"T" = (/obj/effect/floor_decal/newcorner/kafel/blue/quarter{dir = 4},/obj/effect/lighting_dummy/daylight,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
-"U" = (/obj/effect/floor_decal/urban/trim3{dir = 8},/obj/effect/lighting_dummy/daylight,/obj/structure/defensive_barrier{secured = 1; dir = 8; pixel_x = 4; pixel_y = 2},/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"R" = (/obj/effect/lighting_dummy/daylight,/turf/simulated/floor/dirty/indestructable,/area/warfare/battlefield/capture_point/mid)
+"S" = (/obj/effect/floor_decal/urban/trim3{dir = 5},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
+"U" = (/obj/effect/floor_decal/urban/trim3{dir = 8},/obj/effect/lighting_dummy/daylight,/obj/structure/barbwire,/turf/simulated/floor/urban/concrete{density = 1},/area/warfare/battlefield/capture_point/mid)
 "V" = (/obj/structure/closet/crate/wooden{loose = 1},/obj/item/shovel,/obj/item/shovel,/obj/item/shovel,/obj/item/shovel,/obj/item/shovel,/turf/template_noop,/area/template_noop)
 "X" = (/obj/structure/defensive_barrier{pixel_y = -4; secured = 1},/obj/effect/map_entity/nodraw,/turf/simulated/wall/perspecticrete,/area/template_noop)
 "Y" = (/obj/machinery/door/airlock/multi_tile/metal/maintenance/red,/turf/simulated/wall/perspecticrete,/area/template_noop)
@@ -412,18 +407,18 @@ aaaaaaaaaaMmmmmmmmmmmmimmmmmmmmmmmmmmaaaaaaaaaaa
 aaaaaaaaaaMmmmmmmmmEEEiEEEEEEmmmmmmmmaaaaaaaaaaa
 aaaaaaaaaaMmmmmmmmmQQQiQQQQQQmmmmmmmmaaaaaaaaaaa
 aaaaaaaaaaMmmmmmmmmiiiiiiiiiimmmmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmiQQQQQQQQQmQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmimmmmmmmmmmQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmimmmmmmmmmmQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmimHAAAAjmmmQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMEQEQEQEmimUssRszmmmQEQEQEQaaaaaaaaaaa
-aaaaaaaaaaMmmmmmmmmiissbTssimmmmmmmmmaaaaaaaaaaa
-aaaaaaaaaaMEQEQEQEmiissJossiimQEQEQEQaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmmmUsysszmimQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmmmcrrrrSmimQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmmmmmmmmmmimQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmmmmmmmmmmimQEmmmmmaaaaaaaaaaa
-aaaaaaaaaaMmmmmmEQmQQQQQQQQQimQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmQQQQQQQQQQmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmmmmmmmmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmmmmmmmmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmHAAAAjmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMEQEQEQEmmmURRRRzmmmQEQEQEQaaaaaaaaaaa
+aaaaaaaaaaMmmmmmmmmmmRRooRRmmmmmmmmmmaaaaaaaaaaa
+aaaaaaaaaaMEQEQEQEmmmRRooRRmmmQEQEQEQaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmURRRRzmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmcrrrrSmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmmmmmmmmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmmmmmmmmmmmmQEmmmmmaaaaaaaaaaa
+aaaaaaaaaaMmmmmmEQmQQQQQQQQQQmQEmmmmmaaaaaaaaaaa
 aaaaaaaaaaMmmmmmmmmiiiiiiiiiimmmmmmmmaaaaaaaaaaa
 aaaaaaaaaaMmmmmmmmmQQQQQQiQQQmmmmmmmmaaaaaaaaaaa
 aaaaaaaaaaMmmmmmmmmEEEEEEiEEEmmmmmmmmaaaaaaaaaaa
