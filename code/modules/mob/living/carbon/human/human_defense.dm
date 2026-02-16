@@ -154,10 +154,11 @@ meteor_act
 		if(!shield) continue
 		. = shield.handle_shield(src, damage, damage_source, attacker, def_zone, attack_text)
 		if(.) return
-	
+	/*
 	if(defense_intent == I_PARRY && !get_active_hand())
 		. = handle_barehand_parry(damage, damage_source, attacker, def_zone, attack_text)
 		if(.) return  
+	*/ //removed
 	return 0
 	
 /mob/living/carbon/human/proc/handle_barehand_parry(var/damage, var/atom/damage_source, var/mob/attacker, var/def_zone, var/attack_text)
@@ -777,7 +778,7 @@ meteor_act
 	kickdam *= strToDamageModifier(user.my_stats[STAT(str)].level)
 	user.adjustStaminaLoss(rand(10,20))//Kicking someone is a *bigger* deal than before.
 	
-	if(prob(20 - user.my_stats[STAT(dex)].level)) //uh oh we fucked up
+	if(prob(20 - user.my_stats[STAT(dex)].level) && !src.lying) //uh oh we fucked up
 		if(!user.lying)
 			to_chat(user, "<span class='danger'>As you try to kick [src], you lose your balance and fall!</span>")
 			user.Weaken(1)
@@ -793,7 +794,7 @@ meteor_act
 			user.visible_message("<span class=danger>[user] tried to kick [src] in the [affecting.name], but was parried!<span>")
 			return
 			
-	var/missed = !prob((user.SKILL_LEVEL(melee) * 10) + (user.my_stats[STAT(dex)].level) - (src.my_stats[STAT(dex)].level))	 //if true, you missed
+	var/missed = !src.lying && !prob((user.SKILL_LEVEL(melee) * 10) + (user.my_stats[STAT(dex)].level) - (src.my_stats[STAT(dex)].level))	 //if true, you missed. Also made it so it can't whiff on a lying enemy (can still be parried though I think)
 	if(missed) //you missed dummy
 		missed_kick(user, src, affecting)
 		return
