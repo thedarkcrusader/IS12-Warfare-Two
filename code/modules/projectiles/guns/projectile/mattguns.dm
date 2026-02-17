@@ -77,13 +77,6 @@
 	empty_icon = "leverchester-e"
 	can_have_bayonet = TRUE
 
-
-//Paryying.
-/obj/item/gun/projectile/shotgun/pump/boltaction/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
-		return 1
-	return 0
-
 //AMMO
 /obj/item/ammo_casing/brifle
 	desc = "An old worn out looking bullet casing."
@@ -134,11 +127,6 @@
 		qdel(W)
 		add_bayonet()
 
-/obj/item/gun/projectile/shotgun/pump/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
-		return 1
-	return 0
-
 
 /obj/item/gun/projectile/shotgun/pump/shitty/sawn
 	name = "\improper Sawn Off WTX Frontier Special"
@@ -177,10 +165,6 @@
 /obj/item/gun/projectile/automatic/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 13, "rail_y" = 22, "under_x" = 22, "under_y" = 14, "stock_x" = 24, "stock_y" = 13, "special_x" = 28, "special_y" = 16)
 */ //rip attachments
-/obj/item/gun/projectile/automatic/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
-		return 1
-	return 0
 
 /obj/item/gun/projectile/automatic/m22/warmonger
 	name = "Mk.3 Warmonger"
