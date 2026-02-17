@@ -292,6 +292,15 @@
 	if(istype(hat))
 		damage += hat.force * 3
 		damage_flags = hat.damage_flags()
+		
+	var/bad_arc = reverse_direction(target.dir) //arc of directions from which we cannot block or dodge  
+	if(check_shield_arc(target, bad_arc, null, attacker)) //cant dodge from behind  
+		if(target.attempt_dodge())  
+			attacker.visible_message("<span class=danger>[attacker] tried to headbutt [target] but was dodged!<span>")  
+			return 1 // so it doesn't punch em also
+		else if(target.check_shields(damage, null, attacker, BP_HEAD, "the headbutt"))  
+			//attacker.visible_message("<span class=danger>[attacker] tried to headbutt [target] but was parried!<span>")  
+			return 1 // so it doesn't punch em also
 
 	if(damage_flags & DAM_SHARP)
 		attacker.visible_message("<span class='combat_success'>[attacker] gores [target][istype(hat)? " with \the [hat]" : ""]!</span>")
