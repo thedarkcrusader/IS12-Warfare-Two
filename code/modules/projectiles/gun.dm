@@ -884,9 +884,3 @@
 			user.ready_weapon()
 		else if (user.weapon_readied)
 			user.unready_weapon()
-			
-/obj/item/gun/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
-	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
-		return 1
-	return 0
-//parrying
