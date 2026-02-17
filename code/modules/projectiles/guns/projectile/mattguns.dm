@@ -28,6 +28,14 @@
 	hitsound = "bayonet_stab"
 	starts_with_bayonet = TRUE
 
+/obj/item/gun/projectile/shotgun/pump/boltaction/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(istype(W, /obj/item/material/sword/combat_knife) && can_have_bayonet)
+		user.visible_message("[user] attaches a bayonet to the [src].","You attach a bayonet to the [src].")
+		user.remove_from_mob(W)
+		qdel(W)
+		add_bayonet()
+
 //Now THIS is real gun, rare 5 in 100 gun spawn as soldier
 /obj/item/gun/projectile/shotgun/pump/boltaction/good
 	name = "\improper Mark II Glider"
@@ -69,6 +77,12 @@
 	empty_icon = "leverchester-e"
 	can_have_bayonet = TRUE
 
+
+//Paryying.
+/obj/item/gun/projectile/shotgun/pump/boltaction/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
+		return 1
+	return 0
 
 //AMMO
 /obj/item/ammo_casing/brifle
@@ -112,6 +126,20 @@
 	empty_icon = "winchester-e"
 	can_have_bayonet = TRUE
 
+/obj/item/gun/projectile/shotgun/pump/shitty/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(istype(W, /obj/item/material/sword/combat_knife) && can_have_bayonet)
+		user.visible_message("[user] attaches a bayonet to the [src].","You attach a bayonet to the [src].")
+		user.remove_from_mob(W)
+		qdel(W)
+		add_bayonet()
+
+/obj/item/gun/projectile/shotgun/pump/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
+		return 1
+	return 0
+
+
 /obj/item/gun/projectile/shotgun/pump/shitty/sawn
 	name = "\improper Sawn Off WTX Frontier Special"
 	desc = "Purposely cut down and made shorter, it still packs the same punch as its longer brother but in a more compact package. I can’t help but wonder if it’s even reliable."
@@ -139,12 +167,20 @@
 	attack_verb = list ("stabbed", "sliced")
 	hitsound = "bayonet_stab"
 	starts_with_bayonet = TRUE
-	desc = "\improper WTX Frontier Special. This one has a bayonet."
 
-
-
+/*
 /obj/item/gun/projectile/automatic
+	attachable_allowed = list(/obj/item/attachable/holosight, /obj/item/attachable/verticalgrip, /obj/item/attachable/reddot, /obj/item/attachable/lasersight, /obj/item/attachable/angledgrip)
 	screen_shake = 2
+
+
+/obj/item/gun/projectile/automatic/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 13, "rail_y" = 22, "under_x" = 22, "under_y" = 14, "stock_x" = 24, "stock_y" = 13, "special_x" = 28, "special_y" = 16)
+*/ //rip attachments
+/obj/item/gun/projectile/automatic/handle_shield(mob/living/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+	if(default_sword_parry(user, damage, damage_source, attacker, def_zone, attack_text))
+		return 1
+	return 0
 
 /obj/item/gun/projectile/automatic/m22/warmonger
 	name = "Mk.3 Warmonger"
@@ -169,6 +205,14 @@
 	gun_type = GUN_SEMIAUTO
 	//can_have_bayonet = TRUE
 
+
+/obj/item/gun/projectile/automatic/m22/warmonger/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(istype(W, /obj/item/material/sword/combat_knife) && can_have_bayonet)
+		user.visible_message("[user] attaches a bayonet to the [src].","You attach a bayonet to the [src].")
+		user.remove_from_mob(W)
+		qdel(W)
+		add_bayonet()
 
 /obj/item/gun/projectile/automatic/m22/warmonger/fully_auto
 	name = "Mk.5 Warmonger"
@@ -259,6 +303,14 @@
 	magazine_type = /obj/item/ammo_magazine/a762/m14
 	allowed_magazines = /obj/item/ammo_magazine/a762/m14
 	gun_type = GUN_SEMIAUTO
+
+/obj/item/gun/projectile/automatic/m22/warmonger/m14/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(istype(W, /obj/item/material/sword/combat_knife) && can_have_bayonet)
+		user.visible_message("[user] attaches a bayonet to the [src].","You attach a bayonet to the [src].")
+		user.remove_from_mob(W)
+		qdel(W)
+		add_bayonet()
 
 /obj/item/ammo_magazine/a762/m14
 	name = "M41 magazine"
@@ -695,6 +747,17 @@
 
 	gun_type = GUN_SMG
 
+/obj/item/gun/projectile/automatic/machinepistol/attackby(obj/item/W, mob/user)
+	. = ..()
+	if(istype(W, /obj/item/material/sword/combat_knife) && can_have_bayonet)
+		user.visible_message("[user] attaches a bayonet to the [src].","You attach a bayonet to the [src].")
+		user.remove_from_mob(W)
+		qdel(W)
+		add_bayonet()
+/*
+/obj/item/gun/projectile/automatic/machinepistol/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 24, "under_x" = 24, "under_y" = 14, "stock_x" = 24, "stock_y" = 13, "special_x" = 28, "special_y" = 16)
+*/ //rip
 /obj/item/gun/projectile/automatic/machinepistol/wooden
 	name = "Mk.1 Soulburn SMG"
 	desc = "A prototype of what? I have no clue. It feels relatively new, and I’ve been told its high fire rate puts rounds downrange faster than any machine gun. those early production parts are practically exposed. I'm not an engineer but  I think this thing is going to malfunction."
